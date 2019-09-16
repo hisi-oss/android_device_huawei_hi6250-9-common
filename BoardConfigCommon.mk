@@ -7,7 +7,7 @@
 COMMON_PATH := device/huawei/hi6250-9-common
 
 # APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Architecture
 TARGET_ARCH := arm64
