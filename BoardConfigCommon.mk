@@ -45,5 +45,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-l
 # Platform
 TARGET_BOARD_PLATFORM := hi6250
 
+# VNDK
+PRODUCT_USE_VNDK_OVERRIDE := true
+
 # Inherit the proprietary files
 include vendor/huawei/hi6250-9-common/BoardConfigVendor.mk
