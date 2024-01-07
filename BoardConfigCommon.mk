@@ -63,6 +63,9 @@ TARGET_BOARD_PLATFORM := hi6250
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := hardware/hisi/releasetools
 
+# SELinux
+include device/hisi/sepolicy/SEPolicy.mk
+
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := true
 
