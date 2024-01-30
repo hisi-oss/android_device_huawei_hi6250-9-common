@@ -61,7 +61,7 @@ vendor/lib64/vendor.huawei.hardware.perfgenius@2.0.so
 
 # TEE
 bin/tee_auth_daemon
-etc/native_packages.xml
+etc/native_packages.xml:etc/native_packages.bin
 lib/libc_secshared.so
 lib/libteec_client.so
 lib/libteeclientjni.so
@@ -139,7 +139,7 @@ vendor/bin/syna_155A_ta.sec
 vendor/bin/teecd
 vendor/bin/tlogcat
 vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc
-vendor/etc/native_packages.xml
+vendor/etc/native_packages.xml:vendor/etc/native_packages.bin
 vendor/lib/hw/vendor.huawei.hardware.libteec@2.0-impl.so
 vendor/lib/libc_secshared.so
 vendor/lib/libteec.so
