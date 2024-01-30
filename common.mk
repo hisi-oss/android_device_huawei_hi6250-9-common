@@ -10,6 +10,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.hi6250 \
+    fstab.hi6250_ramdisk \
     fstab.modem \
     init.hi6250.rc \
     init.hi6250.usb.rc \
