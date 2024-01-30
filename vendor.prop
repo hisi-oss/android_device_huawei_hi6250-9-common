@@ -4,6 +4,9 @@ ro.fastbootd.available=true
 # OpenGL
 ro.opengles.version=196610
 
+# Perfgenius
+ro.kirin.config.hw_perfgenius=true
+
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1

@@ -47,3 +47,16 @@ vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.2.so
 vendor/lib64/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
+
+# Perfgenius
+vendor/bin/hw/vendor.huawei.hardware.perfgenius@2.0-service
+vendor/etc/perfgenius_config.xml
+vendor/etc/perfgenius_event_policy.xml
+vendor/etc/perfgenius_scenario_policy.xml
+vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc
+vendor/lib/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
+vendor/lib/libperfgenius_vendor_client.so
+vendor/lib/vendor.huawei.hardware.perfgenius@2.0.so
+vendor/lib64/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
+vendor/lib64/libperfgenius_vendor_client.so
+vendor/lib64/vendor.huawei.hardware.perfgenius@2.0.so
