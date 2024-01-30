@@ -83,6 +83,9 @@ BOARD_ROOT_EXTRA_FOLDERS += \
 # SELinux
 include device/hisi/sepolicy/SEPolicy.mk
 
+# Vintf
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := true
 
