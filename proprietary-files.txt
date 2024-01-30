@@ -20,6 +20,11 @@ vendor/lib64/soundfx/libhuaweiprocessing.so
 vendor/lib64/soundfx/liboffloadvisualizer.so
 vendor/lib64/libhuaweiaudioeffectutil.so
 
+# Bluetooth
+vendor/etc/bluetooth/bt_vendor.conf
+vendor/lib64/libbt-vendor.so
+vendor/lib64/libbt-vendor-hisi.so
+
 # Display
 vendor/bin/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-service
 vendor/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc
