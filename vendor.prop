@@ -22,6 +22,9 @@ bluetooth.profile.sap.server.enabled?=true
 # Fastbootd
 ro.fastbootd.available=true
 
+# GPS
+ro.hardware.hisupl=hi1102
+
 # Perfgenius
 ro.kirin.config.hw_perfgenius=true
 
