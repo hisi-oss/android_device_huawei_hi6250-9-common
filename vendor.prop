@@ -1,3 +1,7 @@
+# Audio
+persist.kirin.media.lowlatency.enable=true
+persist.kirin.media.offload.enable=true
+
 # Fastbootd
 ro.fastbootd.available=true
 
