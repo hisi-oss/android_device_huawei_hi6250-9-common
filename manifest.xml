@@ -1,5 +1,14 @@
 <manifest version="1.0" type="device" target-level="3">
     <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -44,6 +53,36 @@
             <instance>default</instance>
         </interface>
         <fqname>@3.0::IKeymasterDevice/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.huawei.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IExtBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IExtBiometricsFingerprint/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.huawei.hardware.biometrics.hwfacerecognize</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IBiometricsFaceRecognize</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IBiometricsFaceRecognize/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.huawei.hardware.biometrics.hwsecurefacerecognize</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureBiometricsFaceRecognize</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISecureBiometricsFaceRecognize/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.huawei.hardware.hwdisplay</name>
