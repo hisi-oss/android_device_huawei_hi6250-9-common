@@ -17,6 +17,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
+PRODUCT_PACKAGES += \
+    libui-v28
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
