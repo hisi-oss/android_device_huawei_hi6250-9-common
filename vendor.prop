@@ -25,6 +25,9 @@ ro.fastbootd.available=true
 # GPS
 ro.hardware.hisupl=hi1102
 
+# Media
+debug.stagefright.ccodec=0
+
 # Perfgenius
 ro.kirin.config.hw_perfgenius=true
 
