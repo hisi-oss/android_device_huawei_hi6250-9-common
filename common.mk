@@ -34,6 +34,11 @@ PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl
 
+# Log
+PRODUCT_PACKAGES += \
+    libhwlog \
+    libxcollie
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
