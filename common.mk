@@ -109,5 +109,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/hisi \
     hardware/huawei
 
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    wpa_supplicant
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/hi6250-9-common/hi6250-9-common-vendor.mk)
