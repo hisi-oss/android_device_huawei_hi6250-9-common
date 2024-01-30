@@ -24,5 +24,8 @@ debug.sf.predict_hwc_composition_strategy=0
 ro.surface_flinger.running_without_sync_framework=true
 service.sf.prime_shader_cache=0
 
+# TEE
+ro.vendor.tui.service=true
+
 # Zygote
 zygote.critical_window.minute=10
