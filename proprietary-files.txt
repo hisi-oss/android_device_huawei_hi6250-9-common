@@ -300,3 +300,7 @@ vendor/lib64/libteec_vendor.so
 vendor/lib64/libstorekeybox.so
 vendor/lib64/libkeymaster3_attestation.so
 vendor/lib64/vendor.huawei.hardware.libteec@2.0.so
+
+# Thermal
+vendor/lib/hw/thermal.hi6250.so
+vendor/lib64/hw/thermal.hi6250.so
