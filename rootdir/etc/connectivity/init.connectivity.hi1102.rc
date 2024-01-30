@@ -1,0 +1,67 @@
+on boot
+    # Bluetooth
+    mkdir /data/vendor/bluedroid 02770 bluetooth bluetooth
+
+on post-fs-data
+    # Wi-Fi
+    setprop wifi.interface wlan0
+    setprop wifi.direct.interface p2p0
+    chmod 0660 /data/vendor/wifi/wpa/wpa_supplicant.conf
+
+    chmod 660 /dev/ttyAMA3
+    chown system system /dev/ttyAMA3
+
+    # GPS
+    mkdir /data/vendor/gnss 0770 system system
+    mkdir /data/vendor/cust_conn 0770 system system
+
+service octty /vendor/bin/octty
+    class core
+    user system
+    group system bluetooth root media
+    disabled
+    shutdown critical
+
+service oam_hisi /vendor/bin/oam_hisi
+    class main
+    user system
+    group system root wifi bluetooth
+    disabled
+
+service hisi_bfg /vendor/bin/start_connectivity_hisi dir_p_mode
+    class late_start
+    user root
+    group system wifi
+    oneshot
+
+on property:vendor.setup_hi110x_modules=success
+    start octty
+    start oam_hisi
+    start hsgnss
+    start agnsscontrol
+    start supl20clientd
+    start watchlssd
+
+service hsgnss /vendor/bin/gnss_engine_hisi -normal
+    class main
+    user gps
+    group system inet root wakelock
+    disabled
+
+service agnsscontrol /vendor/bin/gnss_control_hisi -normal
+    class main
+    user gps
+    group system inet root wakelock
+    disabled
+
+service supl20clientd /vendor/bin/gnss_supl20clientd_hisi
+    class main
+    user system
+    group system inet
+    disabled
+
+service watchlssd /vendor/bin/gnss_watchlssd_thirdparty
+    class main
+    user gps
+    group system inet net_raw wakelock
+    disabled
