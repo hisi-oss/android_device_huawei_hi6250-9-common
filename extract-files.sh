@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib*/hw/gralloc.hi6250.so)
+	    "${PATCHELF}" --add-needed "libhidlbase.so" "${2}"
+            ;;
         vendor/lib*/hw/hwcomposer.hi6250.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
             ;;
