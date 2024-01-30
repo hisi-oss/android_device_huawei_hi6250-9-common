@@ -1,6 +1,7 @@
 # Audio
 persist.kirin.media.lowlatency.enable=true
 persist.kirin.media.offload.enable=true
+ro.hardware.audio.primary=hisi_wrapper
 
 # Fastbootd
 ro.fastbootd.available=true
