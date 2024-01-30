@@ -48,6 +48,10 @@ vendor/lib64/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
 
+# Gatekeeper
+vendor/lib/hw/gatekeeper.hi6250.so
+vendor/lib64/hw/gatekeeper.hi6250.so
+
 # Keystore
 vendor/lib/hw/keystore.hi6250.so
 vendor/lib/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so
