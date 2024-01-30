@@ -464,8 +464,16 @@ on post-fs-data
     chown media_rw media_rw /data/share
 
     # TEE
+    mkdir /data/sec_storage_data 0700 system system
+    restorecon /data/sec_storage_data
+
+    mkdir /data/sec_storage_data_users 0700 system system
+    restorecon /data/sec_storage_data_users
+
     mkdir /data/vendor/log/sec_storage_data 0775 system system
     mkdir /data/vendor/log/sec_storage_data/log 0755 system system
+
+    start teecd
 
     # OMA
     mkdir /data/vendor/misc/oma
@@ -1226,6 +1234,7 @@ service teecd /vendor/bin/teecd
     user root
     group root system readproc
     seclabel u:r:tee:s0
+    disabled
 
 service teelogcat /vendor/bin/tlogcat -f
     class late_start
