@@ -48,6 +48,12 @@ vendor/lib64/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
 
+# Keystore
+vendor/lib/hw/keystore.hi6250.so
+vendor/lib/libimonitor.so
+vendor/lib64/hw/keystore.hi6250.so
+vendor/lib64/libimonitor.so
+
 # Perfgenius
 vendor/bin/hw/vendor.huawei.hardware.perfgenius@2.0-service
 vendor/etc/perfgenius_config.xml

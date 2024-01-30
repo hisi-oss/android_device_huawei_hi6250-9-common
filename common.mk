@@ -35,6 +35,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+PRODUCT_PACKAGES += \
+    libkeymaster3device \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
