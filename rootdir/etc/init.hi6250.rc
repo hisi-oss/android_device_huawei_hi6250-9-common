@@ -430,12 +430,6 @@ on fs
 
     mkdir /splash2/log 0775 system log
 
-    # TEE
-    mkdir /data/sec_storage_data 0700 system system
-    restorecon /data/sec_storage_data
-    mkdir /data/sec_storage_data_users 0700 system system
-    restorecon /data/sec_storage_data_users
-
 on late-fs
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.${ro.hardware} --late
@@ -464,8 +458,20 @@ on post-fs-data
     chown media_rw media_rw /data/share
 
     # TEE
+    mkdir /data/sec_storage_data 0700 system system encryption=None
+    restorecon /data/sec_storage_data
+
+    mkdir /data/sec_storage_data_users 0700 system system encryption=None
+    restorecon /data/sec_storage_data_users
+
     mkdir /data/vendor/log/sec_storage_data 0775 system system
     mkdir /data/vendor/log/sec_storage_data/log 0755 system system
+
+    mkdir /data/vendor/sec_storage_data 0700 system system
+    restorecon /data/vendor/sec_storage_data
+
+    mkdir /data/vendor/sec_storage_data_users 0700 system system
+    restorecon /data/vendor/sec_storage_data_users
 
     # OMA
     mkdir /data/vendor/misc/oma
