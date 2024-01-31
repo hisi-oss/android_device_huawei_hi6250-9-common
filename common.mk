@@ -125,6 +125,9 @@ PRODUCT_PACKAGES += \
     libhwlog \
     libxcollie
 
+PRODUCT_PACKAGES += \
+    libshim_log
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
