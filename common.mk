@@ -108,6 +108,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+PRODUCT_PACKAGES += \
+    TetheringResOverlayHI6250-9 \
+    WifiResOverlayHI6250-9
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.hi6250 \
