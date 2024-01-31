@@ -77,6 +77,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM)/etc/permissions)
 
+# Hisi
+PRODUCT_PACKAGES += \
+    hisi_init \
+    libhwlog \
+    libxcollie
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
@@ -86,11 +92,6 @@ PRODUCT_PACKAGES += \
     libkeymaster3device \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl
-
-# Log
-PRODUCT_PACKAGES += \
-    libhwlog \
-    libxcollie
 
 # Media
 PRODUCT_COPY_FILES += \
