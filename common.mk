@@ -49,6 +49,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl
+
+PRODUCT_PACKAGES += \
+    libstdc++.vendor \
+    libui_shim.vendor
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
