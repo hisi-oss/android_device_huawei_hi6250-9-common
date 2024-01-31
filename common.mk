@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.hisi
+
 # Livedisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service-hisi
