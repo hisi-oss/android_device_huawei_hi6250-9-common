@@ -60,6 +60,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/camera/*|odm/etc/camera/*)
+            sed -i 's/gb2312/iso-8859-1/g' "${2}"
+            sed -i 's/GB2312/iso-8859-1/g' "${2}"
+            sed -i 's/xmlversion/xml version/g' "${2}"
+            ;;
         vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc)
             sed -i 's/preavs/vendor/g' "${2}"
             ;;
@@ -71,6 +76,9 @@ function blob_fixup() {
             ;;
         vendor/lib*/hw/hwcomposer.hi6250.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
+            ;;
+        vendor/lib*/libcamera_algo.so)
+            "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
         vendor/lib*/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
