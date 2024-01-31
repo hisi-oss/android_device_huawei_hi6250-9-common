@@ -157,6 +157,13 @@ PRODUCT_PACKAGES += \
     TetheringResOverlayHI6250-9 \
     WifiResOverlayHI6250-9
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.huawei-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/power/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.hi6250 \
@@ -182,7 +189,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/hisi \
-    hardware/huawei
+    hardware/huawei \
+    hardware/huawei/power-libperfmgr \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Thermal
 PRODUCT_PACKAGES += \
