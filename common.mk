@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
 # Hisi
 PRODUCT_PACKAGES += \
     hisi_init \
+    libchrlog \
     libhwlog \
     libxcollie
 
