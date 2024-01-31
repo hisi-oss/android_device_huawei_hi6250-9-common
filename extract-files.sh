@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc)
+            sed -i 's/preavs/vendor/g' "${2}"
+            ;;
         vendor/lib64/hw/audio.primary_hisi.hi6250.so)
             "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
             ;;
