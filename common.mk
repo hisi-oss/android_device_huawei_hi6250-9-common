@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     fstab.modem \
     init.hi6250.rc \
     init.hi6250.usb.rc \
+    init.override.rc \
     ueventd.hi6250.rc
 
 PRODUCT_COPY_FILES += \
