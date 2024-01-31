@@ -428,7 +428,7 @@ on fs
 
     # Mount everything
     mount_all /vendor/etc/fstab.modem --early
-    mount_all /vendor/etc/fstab.${ro.hardware}
+    mount_all /vendor/etc/fstab.${ro.hardware} --early
 
     restorecon /splash2
     chmod 775 /splash2
@@ -442,6 +442,10 @@ on fs
     restorecon /data/sec_storage_data
     mkdir /data/sec_storage_data_users 0700 system system
     restorecon /data/sec_storage_data_users
+
+on late-fs
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.${ro.hardware} --late
 
 on post-fs
     # Set RLIMIT_MEMLOCK to 64MB
