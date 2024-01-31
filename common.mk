@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl
 
 PRODUCT_PACKAGES += \
+    disable_configstore
+
+PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
