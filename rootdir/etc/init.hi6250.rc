@@ -111,8 +111,6 @@ on init
     chown root system /dev/nve0
 
     # TEE
-    chown root root /sec_storage
-    chmod 600 /sec_storage
     chmod 0400 /dev/hisi_teelog
 
     # Audio
@@ -430,12 +428,7 @@ on fs
     mount_all /vendor/etc/fstab.modem --early
     mount_all /vendor/etc/fstab.${ro.hardware} --early
 
-    restorecon /splash2
-    chmod 775 /splash2
-    chown root system /splash2
-
     mkdir /splash2/log 0775 system log
-    symlink /splash2 /log
 
     # TEE
     mkdir /data/sec_storage_data 0700 system system
