@@ -33,9 +33,6 @@ ro.hardware.hisupl=hi1102
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
-# Perfgenius
-ro.kirin.config.hw_perfgenius=true
-
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1

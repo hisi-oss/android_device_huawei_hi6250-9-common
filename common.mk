@@ -158,6 +158,13 @@ PRODUCT_PACKAGES += \
     TetheringResOverlayHI6250-9 \
     WifiResOverlayHI6250-9
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.hisi-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/power/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.hi6250 \
@@ -186,7 +193,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/hisi
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/hisi \
+    hardware/hisi/power-libperfmgr
 
 # Thermal
 PRODUCT_PACKAGES += \
