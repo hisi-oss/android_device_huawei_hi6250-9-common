@@ -12,6 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set,huaweiAudioVars,emui_version,9)
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
