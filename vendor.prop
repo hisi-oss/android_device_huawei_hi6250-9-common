@@ -53,3 +53,6 @@ service.sf.prime_shader_cache=0
 
 # TEE
 ro.vendor.tui.service=true
+
+# Zygote
+zygote.critical_window.minute=10
