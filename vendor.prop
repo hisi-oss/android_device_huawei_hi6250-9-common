@@ -49,6 +49,7 @@ ro.telephony.default_network=9,9
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
+service.sf.prime_shader_cache=0
 
 # TEE
 ro.vendor.tui.service=true
