@@ -47,6 +47,7 @@ ro.config.hw_eccNumUseRplmn=true
 ro.telephony.default_network=9,9
 
 # SurfaceFlinger
+debug.sf.enable_gl_backpressure=1
 debug.sf.latch_unsignaled=1
 debug.sf.disable_client_composition_cache=1
 service.sf.prime_shader_cache=0
