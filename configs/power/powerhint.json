@@ -4,8 +4,10 @@
             "Name": "CPULittleClusterMaxFreq",
             "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
             "Values": [
-                "1805000",
-                "1306000"
+                "1709000",
+                "1306000",
+                "807000",
+                "480000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -14,10 +16,8 @@
             "Name": "CPULittleClusterMinFreq",
             "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
             "Values": [
-                "1805000",
-                "1517000",
+                "1709000",
                 "1306000",
-                "1018000",
                 "807000",
                 "480000"
             ],
@@ -27,8 +27,11 @@
             "Name": "CPUBigClusterMaxFreq",
             "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
             "Values": [
-                "2304000",
-                "1517000"
+                "2362000",
+                "2112000",
+                "2016000",
+                "1805000",
+                "1402000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -37,13 +40,11 @@
             "Name": "CPUBigClusterMinFreq",
             "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
             "Values": [
-                "2304000",
+                "2362000",
+                "2112000",
                 "2016000",
                 "1805000",
-                "1517000",
-                "1210000",
-                "807000",
-                "480000"
+                "1402000"
             ],
             "ResetOnInit": true
         },
@@ -51,8 +52,12 @@
             "Name": "DDRMaxFreq",
             "Path": "/sys/class/devfreq/ddrfreq/max_freq",
             "Values": [
-                "1333000000",
-                "533000000"
+                "933000000",
+                "800000000",
+                "533000000",
+                "360000000",
+                "240000000",
+                "120000000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -61,9 +66,8 @@
             "Name": "DDRMinFreq",
             "Path": "/sys/class/devfreq/ddrfreq/min_freq",
             "Values": [
-                "1333000000",
-                "960000000",
-                "667000000",
+                "933000000",
+                "800000000",
                 "533000000",
                 "360000000",
                 "240000000",
@@ -76,7 +80,12 @@
             "Path": "/sys/class/devfreq/gpufreq/max_freq",
             "Values": [
                 "900000000",
-                "480000000"
+                "800000000",
+                "680000000",
+                "480000000",
+                "360000000",
+                "240000000",
+                "120000000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -100,16 +109,17 @@
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
                 "100",
+                "50",
                 "10"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "VIPSchedtuneBoost",
-            "Path": "/dev/stune/vip/schedtune.boost",
+            "Name": "FGSchedtuneBoost",
+            "Path": "/dev/stune/foreground/schedtune.boost",
             "Values": [
                 "100",
-                "10"
+                "0"
             ],
             "ResetOnInit": true
         },
@@ -164,48 +174,42 @@
             "PowerHint": "INTERACTION",
             "Node": "TASchedtuneBoost",
             "Duration": 0,
-            "Value": "10"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "VIPSchedtuneBoost",
-            "Duration": 0,
-            "Value": "10"
+            "Value": "50"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "CPULittleClusterMinFreq",
-            "Duration": 3500,
-            "Value": "1805000"
+            "Duration": 5000,
+            "Value": "1709000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterMinFreq",
-            "Duration": 3500,
-            "Value": "2304000"
+            "Duration": 5000,
+            "Value": "2362000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "DDRMinFreq",
-            "Duration": 3500,
-            "Value": "1333000000"
+            "Duration": 5000,
+            "Value": "933000000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "GPUMinFreq",
-            "Duration": 3500,
+            "Duration": 5000,
             "Value": "900000000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "TASchedtuneBoost",
-            "Duration": 3500,
+            "Duration": 5000,
             "Value": "100"
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "VIPSchedtuneBoost",
-            "Duration": 3500,
+            "Node": "FGSchedtuneBoost",
+            "Duration": 5000,
             "Value": "100"
         },
         {
