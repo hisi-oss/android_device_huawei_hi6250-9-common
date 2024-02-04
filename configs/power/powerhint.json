@@ -105,22 +105,16 @@
             "ResetOnInit": true
         },
         {
-            "Name": "TASchedtuneBoost",
-            "Path": "/dev/stune/top-app/schedtune.boost",
+            "Name": "TA_uClampBoost",
+            "Path": "/dev/cpuset/top-app/uclamp.min",
             "Values": [
-                "100",
-                "50",
-                "10"
+                "0",
+                "10",
+                "25",
+                "35",
+                "max"
             ],
-            "ResetOnInit": true
-        },
-        {
-            "Name": "FGSchedtuneBoost",
-            "Path": "/dev/stune/foreground/schedtune.boost",
-            "Values": [
-                "100",
-                "0"
-            ],
+            "DefaultIndex": 1,
             "ResetOnInit": true
         },
         {
@@ -166,6 +160,12 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "TA_uClampBoost",
+            "Duration": 0,
+            "Value": "35"
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "DDRMinFreq",
             "Duration": 0,
             "Value": "533000000"
@@ -175,12 +175,6 @@
             "Node": "GPUMinFreq",
             "Duration": 0,
             "Value": "480000000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "TASchedtuneBoost",
-            "Duration": 0,
-            "Value": "50"
         },
         {
             "PowerHint": "LAUNCH",
@@ -208,15 +202,9 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "TASchedtuneBoost",
+            "Node": "TA_uClampBoost",
             "Duration": 5000,
-            "Value": "100"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "FGSchedtuneBoost",
-            "Duration": 5000,
-            "Value": "100"
+            "Value": "25"
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
