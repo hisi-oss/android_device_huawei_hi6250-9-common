@@ -160,6 +160,24 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "CPUBigClusterMinFreq",
+            "Duration": 0,
+            "Value": "2112000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPULittleClusterMaxFreq",
+            "Duration": 0,
+            "Value": "1306000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUBigClusterMaxFreq",
+            "Duration": 0,
+            "Value": "2112000"
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "DDRMinFreq",
             "Duration": 0,
             "Value": "533000000"
