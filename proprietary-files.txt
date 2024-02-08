@@ -50,8 +50,10 @@ vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
 
 # Keystore
 vendor/lib/hw/keystore.hi6250.so
+vendor/lib/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so
 vendor/lib/libimonitor.so
 vendor/lib64/hw/keystore.hi6250.so
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib64/hw/android.hardware.keymaster@3.0-impl-hisi.so
 vendor/lib64/libimonitor.so
 
 # Perfgenius
