@@ -65,6 +65,11 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libui_shim.vendor
 
+# Charger
+PRODUCT_PACKAGES += \
+    chargeled \
+    chargeled.recovery
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
