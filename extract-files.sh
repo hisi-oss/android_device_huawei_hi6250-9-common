@@ -68,6 +68,9 @@ function blob_fixup() {
         vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc)
             sed -i 's/preavs/vendor/g' "${2}"
             ;;
+        vendor/etc/init/android.hardware.secure_element@1.0-service.hisi.rc)
+            sed -i 's/1.0-service/1.0-service.hisi/g' "${2}"
+            ;;
         vendor/lib64/hw/audio.primary_hisi.hi6250.so)
             "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
             ;;
