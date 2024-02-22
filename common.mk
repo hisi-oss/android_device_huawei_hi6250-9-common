@@ -153,9 +153,9 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
-# USB
+# Trust
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    vendor.lineage.trust@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
