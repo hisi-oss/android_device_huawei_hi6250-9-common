@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     chargeled \
-    chargeled.recovery
+    chargeled.recovery \
+    charger_res_images_vendor
 
 # Display
 PRODUCT_PACKAGES += \
@@ -128,9 +129,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.hisi \
+    android.hardware.health-service.hisi-recovery
 
 # Hisi
 PRODUCT_PACKAGES += \
