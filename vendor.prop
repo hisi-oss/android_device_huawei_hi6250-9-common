@@ -47,6 +47,7 @@ ro.config.hw_eccNumUseRplmn=true
 ro.telephony.default_network=9,9
 
 # SurfaceFlinger
+debug.renderengine.backend=threaded
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.latch_unsignaled=1
