@@ -1023,3 +1023,12 @@ on property:sys.conn_macs.ready=1
     # Wi-Fi
     chown wifi wifi /data/vendor/wifi/macwlan
     chmod 0666 /data/vendor/wifi/macwlan
+
+service vendor.hwcomposer-2-2 /vendor/bin/hw/android.hardware.graphics.composer@2.2-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles HighPerformance   
