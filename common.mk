@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libui_shim.vendor
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -123,9 +127,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.hisi \
+    android.hardware.health-service.hisi-recovery
 
 # Hisi
 PRODUCT_PACKAGES += \
