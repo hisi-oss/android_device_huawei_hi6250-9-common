@@ -3,7 +3,7 @@ ro.fastbootd.available=true
 
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
-debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=12420000
 debug.sf.late.app.duration=12620000
