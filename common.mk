@@ -64,5 +64,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/hisi \
     hardware/huawei
 
+# Task profiles
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/hi6250-9-common/hi6250-9-common-vendor.mk)
