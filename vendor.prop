@@ -42,7 +42,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.opengles.version=196610
 
 # Perfgenius
-ro.kirin.config.hw_perfgenius=true
+ro.kirin.config.hw_perfgenius=false
 
 # RIL
 bastet.service.enable=true
