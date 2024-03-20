@@ -14,3 +14,6 @@ debug.sf.earlyGl.app.duration=12000000
 debug.sf.hwc.min.duration=17000000
 ro.surface_flinger.running_without_sync_framework=true
 service.sf.prime_shader_cache=0
+
+# Zygote
+zygote.critical_window.minute=10
